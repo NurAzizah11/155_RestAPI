@@ -77,5 +77,10 @@ fun EntryKontakBody(
     onSaveClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    Column(
+        verticalArrangement = Arrangement.spacedBy(18.dp),
+        modifier = Modifier.padding(12.dp)
+    ) {
 
+    }
 }
