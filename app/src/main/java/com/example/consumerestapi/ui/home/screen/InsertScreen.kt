@@ -35,26 +35,26 @@ fun FormInputSiswa(
             value = insertUiEvent.nama,
             onValueChange = {onValueChange(insertUiEvent.copy(nama = it))},
             label = { Text(text = "Nama") },
+            singleLine = true,
             modifier = Modifier.fillMaxWidth(),
-            enabled = enabled,
-            singleLine = true
+            enabled = enabled
         )
         OutlinedTextField(
             value = insertUiEvent.email,
             onValueChange = {onValueChange(insertUiEvent.copy(email = it))},
             label = { Text(text = "email") },
+            singleLine = true,
             modifier = Modifier.fillMaxWidth(),
-            enabled = enabled,
-            singleLine = true
+            enabled = enabled
         )
         OutlinedTextField(
             value = insertUiEvent.noHp,
             onValueChange = {onValueChange(insertUiEvent.copy(noHp = it))},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             label = { Text(text = "noHp") },
+            singleLine = true,
             modifier = Modifier.fillMaxWidth(),
-            enabled = enabled,
-            singleLine = true
+            enabled = enabled
         )
 
         if (enabled) {
@@ -68,4 +68,14 @@ fun FormInputSiswa(
             modifier = Modifier.padding(bottom = 12.dp)
         )
     }
+}
+
+@Composable
+fun EntryKontakBody(
+    insertUiState: InsertUiState,
+    onKontakValueChange: (InsertUiEvent) -> Unit,
+    onSaveClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+
 }
