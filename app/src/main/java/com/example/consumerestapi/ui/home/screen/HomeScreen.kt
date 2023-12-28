@@ -28,6 +28,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.consumerestapi.R
 import com.example.consumerestapi.model.Kontak
+import com.example.consumerestapi.navigation.DestinasiNavigasi
 import com.example.consumerestapi.ui.home.viewmodel.KontakUIState
 
 @Composable
@@ -51,6 +52,7 @@ fun HomeStatus(
             }
         )
         is KontakUIState.Error -> OnError(retryAction, modifier = modifier.fillMaxSize())
+        else -> {}
     }
 }
 
@@ -132,14 +134,19 @@ fun KontakCard(
                         contentDescription = null)
                 }
                 Text(
-                    text = kontak.noHp,
+                    text = kontak.email,
                     style = MaterialTheme.typography.titleMedium,
                 )
             }
             Text(
-                text = kontak.alamat,
+                text = kontak.noHp,
                 style = MaterialTheme.typography.titleMedium,
             )
         }
     }
+}
+
+object DestinasiHome : DestinasiNavigasi {
+    override val route = "home"
+    override val titleRes = "Kontak"
 }
