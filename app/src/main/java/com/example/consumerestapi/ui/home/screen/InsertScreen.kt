@@ -17,10 +17,13 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.consumerestapi.R
 import com.example.consumerestapi.navigation.DestinasiNavigasi
+import com.example.consumerestapi.ui.PenyediaViewModel
 import com.example.consumerestapi.ui.home.viewmodel.InsertUiEvent
 import com.example.consumerestapi.ui.home.viewmodel.InsertUiState
+import com.example.consumerestapi.ui.home.viewmodel.InsertViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -102,4 +105,14 @@ fun EntryKontakBody(
 object DestinasiEntry : DestinasiNavigasi {
     override val route = "item_entry"
     override val titleRes = "Entry Siswa"
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun EntryKontakScreen(
+    navigateBack: () -> Unit,
+    modifier: Modifier = Modifier,
+    viewModel: InsertViewModel = viewModel(factory = PenyediaViewModel.Factory),
+){
+
 }
