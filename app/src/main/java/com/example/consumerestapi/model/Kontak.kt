@@ -8,7 +8,7 @@ data class Kontak(
     val id: Int,
     val nama: String,
     @SerialName(value = "email")
-    val alamat: String,
-    @SerialName(value = "nohp")
+    val email: String,
+    @SerialName(value = "noHp")
     val noHp: String,
 )
